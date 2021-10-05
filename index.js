@@ -20,7 +20,7 @@ app.use(cors());
 const { HAWKINS, PORT } = process.env;
 
 // const hereIsTheUpsideDown = updasideMode;
-const hereIsTheUpsideDown = HAWKINS === 'false';
+const hereIsTheUpsideDown = HAWKINS === 'true';
 
 app.get('/', (req, res) => {
   const characters = strangerThingsService.search(
