@@ -17,10 +17,10 @@ const strangerThingsService = new StrangerThingsService(
 
 app.use(cors());
 
-const { HAWKINS, PORT } = process.env;
+const { UPSIDEDOWN_MODE, PORT } = process.env;
 
 // const hereIsTheUpsideDown = updasideMode;
-const hereIsTheUpsideDown = HAWKINS === 'true';
+const hereIsTheUpsideDown = UPSIDEDOWN_MODE === 'false';
 
 app.get('/', (req, res) => {
   const characters = strangerThingsService.search(
